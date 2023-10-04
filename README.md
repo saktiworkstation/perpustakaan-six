@@ -17,7 +17,7 @@ Proyek ini dirancang untuk membantu pengguna dalam mengelola koleksi buku mereka
 
 - Pencarian dan penelusuran buku yang efisien.
 - Penyimpanan buku ke dalam daftar bacaan dan favorit.
-- Sistem peringkat dan ulasan pengguna.
+- Mememasan ruangan secara khusus di perpustakaan.
 - Rekomendasi buku berdasarkan preferensi pengguna.
 - Manajemen akun pengguna, termasuk login dan pendaftaran.
 
@@ -28,4 +28,4 @@ Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah ber
 1. Clone repositori ini ke komputer Anda:
 
    ```bash
-   git clone https://github.com/namauser/repo-perpustakaan-web.git
+   git clone https://github.com/saktiworkstation/perpustakaan-six
