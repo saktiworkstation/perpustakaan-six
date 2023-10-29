@@ -1,0 +1,79 @@
+body{
+    color: #152C5B;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-registration input{
+    border-radius: 0;
+    margin-bottom: -1px;
+}
+
+.btn-glow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.home-img{
+    border-radius: 135px 15px 80px 15px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat, #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.letak-border-img{
+    width: 621.602px;
+    height: 371.113px;
+    flex-shrink: 0;
+}
+
+.style-border-img{
+    border-radius: 135px 15px 90px 15px;
+    border: 1px solid #D1D1D1;
+    background: rgba(255, 255, 255, 0.00);
+}
+
+.box-buku{
+    width: 260px;
+    height: 470px;
+    flex-shrink: 0;
+}
+
+.style-box-buku {
+    border-radius: 10px;
+    border: 1px solid rgba(191, 191, 191, 0.62);
+}
+
+.text-over{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.text-over:hover {
+    white-space: normal;
+    overflow: visible;
+}
+
+.bg-room{
+    background: rgba(217, 217, 217, 0.50);
+}
