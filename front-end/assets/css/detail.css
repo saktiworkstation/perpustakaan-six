@@ -1,0 +1,151 @@
+p{
+    line-height: 15px;
+    color: #313131;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+span{
+    font-weight: 600;
+}
+
+.rating-text{
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.text-rating{
+    font-size: 16px;
+}
+.main-content{
+    padding-top: 50px;
+    height: 100%;
+
+}
+
+.side-content{
+    padding: 30px;
+    padding-top: 50px;
+    height: 100%; 
+    background-color: #EBEBEB;
+    overflow: auto;
+}
+
+.text-head{
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54.4px;
+}
+
+.similar{
+    font-size: 30px;
+}
+
+.row-sinopsis{
+    border-top: 0.2px solid #cfcfcf;
+    border-bottom: 0.2px solid #cfcfcf;
+    padding: 30px 20px 20px 0px;
+    margin: 0;
+}
+
+.sinopsis-head{
+    color: #000;
+    font-size: 30x;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+.row-sinopsis p{
+    color: #313131;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify;
+    padding-left: 0px;
+    line-height: 150%;
+}
+
+.ulasan-head{
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.ulasan-row{
+    padding-top: 20px;
+}
+
+.profile-pict{
+    border-radius: 50%; 
+    width: 100px; 
+    height: 100px;
+    background-color: #ebebeb;
+}
+
+.name{
+    color: #313131;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 170%; /* 20.4px */
+}
+
+.rating-review{
+    margin-top: -15px;
+}
+
+.isi-ulasan{
+    padding-right: 30px;
+}
+.isi-ulasan p{
+    color: #313131;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 17px */
+}
+
+.pict-bg{
+    background: #ebebeb;
+    border-radius: 5px;
+}
+
+.card-detail-custom{
+    height: 200px;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 25px 0;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%; /* 34px */
+}
+.card-side{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card-body p{
+    color: #313131;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6px;
+}
+
+

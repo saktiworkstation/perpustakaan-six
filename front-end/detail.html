@@ -114,9 +114,9 @@
          </div>
     </nav>
 
-    <div class="container container-custom">
+    <div class="container">
         <div class="row">
-            <div class="col-8" style="height: 100%;">
+            <div class="col-8 main-content">
                 <div class="row">
                     <div class="col-4">
                         <figure class="figure">
@@ -124,8 +124,8 @@
                         </figure>
                     </div>
                     <div class="col-8">
-                        <h1 class="text-header">Orang-orang Biasa</h1>
-                        <div class="rating-text">
+                        <h1 class="text-head">Orang-orang Biasa</h1>
+                        <div class="rating-text row">
                             <div class="rating">
                                 <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                 <i class="fa-solid fa-star" style="color: #ffd700;"></i>
@@ -133,7 +133,9 @@
                                 <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                 <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                             </div>
-                            <p>5 of 5 <span>|</span> 180 ulasan</p>
+                            <div>                            
+                              <p class="text-rating">5 of 5 <span>|</span> 180 ulasan</p>
+                            </div>
                         </div>
                         <p>Penulis  : <span>Andrea Hirata</span></p>
                         <p>Penerbit : <span>Bentang Pustaka</span></p>
@@ -141,8 +143,8 @@
                         <p>Stok Tersedia : <span>1</span></p>
                     </div>
                 </div>
-                <div class="row">
-                    <h1>Sinopsis</h1>
+                <div class="row row-sinopsis">
+                    <h1 class="sinopsis-head">Sinopsis</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit pariatur nemo nam. 
                        Atque, cum facilis! Quos et reprehenderit nesciunt qui consectetur cumque dolorum, veritatis maiores quisquam. 
                        Aliquid, veniam tempore dolorem commodi optio iusto blanditiis possimus porro vero nobis ea culpa voluptate natus 
@@ -151,23 +153,25 @@
                        Iste, ab voluptatem maiores iure reprehenderit, consectetur ipsa quae deleniti nulla placeat, atque nesciunt vitae. Harum dolore facere numquam? 
                        Quos vero labore nobis modi quia.</p>
                 </div>
-                <div class="row">
-                    <h1>Ulasan</h1>
-                    <div class="col-2">
-                        <div class="profile-pict bg-primary" style="border-radius: 50%; width: 100px; height: 100px;">
+                <div class="row ulasan-row">
+                    <h1 class="ulasan-head">Ulasan</h1>
+                    <div class="col-md-2">
+                        <div class="profile-pict">
                             <img src="" alt="" srcset="">
                         </div>
                     </div>
                     <div class="col-10">
                         <div class="ulasan">
                             <div class="detail-ulasan">
-                                <h3>Nama</h3>
-                                <div class="rating">
+                                <h3 class="name">Nama</h3>
+                                <div class="rating-review">
+                                  <div class="rating">
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                  </div>
                                 </div>
                                 <p>22 Oktober 2023</p>
                             </div>
@@ -182,20 +186,111 @@
                 </div>
 
             </div>
-            <div class="col-4" style="height: 1000px; background-color: #EBEBEB;">
+            <div class="col-4 side-content">
+              <h1 class="text-head similar">Similar</h1>
                 <div class="row card-detail-custom">
                     <div class="col-5">
-                        <img src="assets/img/card/ayah.png" class="card-img-top" alt="...">
+                      <div class="pict-bg">
+                        <a href="#">
+                          <img src="assets/img/card/ayah.png" class="card-img-top" alt="...">
+                        </a>
+                      </div>
                     </div>
                     <div class="col-7">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Ayah</h5>
+                              <div class="rating rating-review card-side">
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                              </div>
+                            <p>Penulis  : <span>Andrea Hirata</span></p>
+                            <p>Penerbit : <span>Bentang Pustaka</span></p>
+                            <p>Tahun Terbit : <span>2018</span></p>
+                            <p>Stok Tersedia : <span>1</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row card-detail-custom">
+                  <div class="col-5">
+                    <div class="pict-bg">
+                      <a href="#">
+                        <img src="assets/img/card/ayah.png" class="card-img-top" alt="...">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-7">
+                      <div class="card-body">
+                          <h5 class="card-title">Ayah</h5>
+                            <div class="rating rating-review card-side">
+                              <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                              <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                              <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                              <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                              <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            </div>
+                          <p>Penulis  : <span>Andrea Hirata</span></p>
+                          <p>Penerbit : <span>Bentang Pustaka</span></p>
+                          <p>Tahun Terbit : <span>2018</span></p>
+                          <p>Stok Tersedia : <span>1</span></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row card-detail-custom">
+                <div class="col-5">
+                  <div class="pict-bg">
+                    <a href="#">
+                      <img src="assets/img/card/ayah.png" class="card-img-top" alt="...">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Ayah</h5>
+                          <div class="rating rating-review card-side">
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                           </div>
+                        <p>Penulis  : <span>Andrea Hirata</span></p>
+                        <p>Penerbit : <span>Bentang Pustaka</span></p>
+                        <p>Tahun Terbit : <span>2018</span></p>
+                        <p>Stok Tersedia : <span>1</span></p>
                     </div>
                 </div>
             </div>
+
+            <div class="row card-detail-custom">
+              <div class="col-5">
+                <div class="pict-bg">
+                  <a href="#">
+                    <img src="assets/img/card/ayah.png" class="card-img-top" alt="...">
+                  </a>
+                </div>
+              </div>
+              <div class="col-7">
+                  <div class="card-body">
+                      <h5 class="card-title">Ayah</h5>
+                        <div class="rating rating-review card-side">
+                          <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                          <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                          <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                          <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                          <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                        </div>
+                      <p>Penulis  : <span>Andrea Hirata</span></p>
+                      <p>Penerbit : <span>Bentang Pustaka</span></p>
+                      <p>Tahun Terbit : <span>2018</span></p>
+                      <p>Stok Tersedia : <span>1</span></p>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
 
