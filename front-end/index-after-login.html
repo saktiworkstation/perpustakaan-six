@@ -86,8 +86,7 @@
                         </ul>
                       </div>
                     </div>
-                  </div>
-                  
+                  </div>                
               </li>
               <li class="nav-item nav-item-custom">
                 <a class="nav-link nav-link-custom" href="#booking-section">Booking</a>
@@ -98,87 +97,23 @@
             </ul>
 
             <!-- button -->
-              <button type="button" class="btn btn-login-custom" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-whatever="@getbootstrap">Sign in</button>
-                <div class="modal fade backdrop-custom" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <button type="button" class="btn-close close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <div class="modal-dialog modal-dialog-custom">
-                    <div class="modal-content modal-custom">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5 title-modal-custom">Sign In</h1>
-                      </div>
-                      <div class="modal-body modal-body-custom">
-                        <div class="row row-modal-custom ">
-                          <div class="col-6 col-modal-custom">
-                            <button type="button" class="btn btn-modal-login-custom"><a href="">Sign in</a></button>
-                          </div>
-                          <div class="col-6 col-modal-custom">
-                            <button type="button" class="btn btn-modal-regis-custom"><a href="">Sign up</a></button>
-                          </div>
-                        </div>
-                        <form>
-                          <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label label-custom" >Email</label>
-                            <input type="text" class="form-control form-custom" id="recipient-name" placeholder="Masukan Email">
-                          </div>
-                          <div class="mb-3">
-                            <label for="message-text" class="col-form-label label-custom" >Password</label>
-                            <input class="form-control form-custom" id="message-text" placeholder="Masukan Password"></input>
-                          </div>
-                          <p>Lupa <a href="#">Password</a>?</p>
-                        </form>
-                        <button type="button" class="btn btn-primary btn-primary-custom">Sign in</button>
-                        <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
-                        <p class="text-center">Belum punya akun? <a href="#">daftar </a>sekarang</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button type="button" class="btn btn-regis-custom" data-bs-toggle="modal" data-bs-target="#myModal-regis" data-bs-whatever="@getbootstrap">Sign up</button>
-                <div class="modal fade backdrop-custom" id="myModal-regis" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <button type="button" class="btn-close close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <div class="modal-dialog modal-dialog-custom">
-                    <div class="modal-content modal-custom">
-                      <div class="modal-header">
-                        <Sign class="modal-title fs-5 title-modal-custom">Sign Up</h1>
-                      </div>
-                      <div class="modal-body modal-body-custom">
-                        <div class="row row-modal-custom ">
-                          <div class="col-6 col-modal-custom">
-                            <button type="button" class="btn btn-modal-regis-custom custom-rounded"><a href="#">Sign in</a></button>
-                          </div>
-                          <div class="col-6 col-modal-custom">
-                            <button type="button" class="btn btn-modal-login-custom custom-rounded-2"><a href="">Sign up</a></button>
-                          </div>
-                        </div>
-                        <form>
-                          <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label label-custom" >Email</label>
-                            <input type="text" class="form-control form-custom" id="recipient-name" placeholder="Masukan Email">
-                          </div>
-                          <div class="mb-3">
-                            <label for="message-text" class="col-form-label label-custom" >Nama Lengkap</label>
-                            <input class="form-control form-custom" id="message-text" placeholder="Masukan Nama"></input>
-                          </div>
-                          <div class="mb-3">
-                            <label for="message-text" class="col-form-label label-custom" >Password</label>
-                            <input class="form-control form-custom" id="message-text" placeholder="Masukan Password"></input>
-                          </div>
-                          <div class="mb-3">
-                            <label for="message-text" class="col-form-label label-custom" >Confirm Password</label>
-                            <input class="form-control form-custom" id="message-text" placeholder="Masukan Password"></input>
-                          </div>
-                        </form>
-                        <button type="button" class="btn btn-primary btn-primary-custom">Sign up</button>
-                        <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
-                        <p class="text-center">Sudah punya akun? <a href="#">login </a>sekarang</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-              
-
+            <ul class="account">
+              <li class="dropdown">
+                <a class="btn-login-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Borrowing</a></li>
+                    <li><a class="dropdown-item" href="#">Bookmark</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                  </ul>
+              </li>
+            </ul>
+           </div>
+         </div>                
+                
           </div>
         </div>
       </nav>
@@ -230,7 +165,7 @@
                       <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                       <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                     </div>
-                    <button type="button" class="btn btn-card-custom ">View More</button>
+                    <button type="button" class="btn btn-card-custom"><a href="detail.html">View More</a></button>
                   </div>
                 </div>
               </div>
