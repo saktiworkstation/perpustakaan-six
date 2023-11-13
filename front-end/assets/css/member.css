@@ -1,0 +1,41 @@
+p{
+    text-align: center;
+    line-height: 10px;
+}
+
+.container-custom{
+    padding-top: 50px;
+}
+
+.card-custom{
+    height: auto;
+    margin: auto;
+}
+
+.card-rectangle{
+    width:260px;
+    height: 260px;
+    border-radius: 5px;
+}
+
+.card-rectangle{
+    width: 100%;
+    height: auto;
+}
+
+.sosmed-col{
+    margin-top: 25px;
+    padding: 10px 20px;
+}
+
+.sosmed{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+}
+
+.row-1-custom{
+    margin-bottom: 30px;
+}
+

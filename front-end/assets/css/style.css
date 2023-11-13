@@ -10,12 +10,24 @@ a{
     font-color: #fff;
 }
 
+a:visited {
+    color: inherit;
+}
+
 ul{
     list-style-type: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .account{
     margin-top: 10px;
+}
+
+.btn:active{
+    border: 1px solid #fff;
 }
 
 /* navbar */
@@ -29,7 +41,7 @@ ul{
 
 .title{
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -60,9 +72,9 @@ ul{
     width: auto;
     height: auto;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
 }
 
@@ -101,10 +113,10 @@ ul{
 }
 
 .dropdown-custom{
-    width: 1300px;
+    width: 1400px;
     height: 506px;
-    left: -765px !important;
-    top: 125% !important;
+    left: -830px !important;
+    top: 135% !important;
     padding: 20px;
     border-radius: 15px;
 }
@@ -517,6 +529,10 @@ ul{
 
 .main-text-us{
     margin-top: 20%;
+}
+
+.main-text-us a:hover{
+    color: #000;
 }
 
 /* footer */

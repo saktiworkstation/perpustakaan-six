@@ -3,10 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Anggota</title>
+    <title>Member detail</title>
+
+     <!-- css -->
+     <link rel="stylesheet" href="assets/css/bootstrap.css">
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/member.css">
+ 
+     <!-- font -->
+     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
+ 
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/ccfc593106.js" crossorigin="anonymous"></script>
+ 
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
-    
+     <!-- navigation -->
+     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom ">
+        <div class="container">
+          <!-- logo -->
+          <a class="navbar-brand title" href="#hero-section"><span class="first">Oasis</span><span class="second">pavilion</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- navbar -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- search -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-search-custom" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <!-- navlink -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-custom">
+              <li class="nav-item nav-item-custom">
+                <a class="nav-link nav-link-custom active-custom" aria-current="page" href="#content-section">Book list</a>
+              </li>
+              <li class="nav-item dropdown nav-item-custom">
+                <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                  <div class="dropdown-menu dropdown-custom">
+                    <div class="row">
+                      <div class="col-3">
+                        <ul class="theme-category">
+                          <h2 class="drop-title">Theme</h2>
+                          <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                          <li><a class="dropdown-item item-custom" href="#">Another action</a></li>
+                          <li><a class="dropdown-item item-custom" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-9">
+                        <ul class="genre-category row">
+                          <h2 class="drop-title">Genre</h2>
+                          <div class="col-3">
+                            <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Another action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Something else here</a></li>
+                          </div>
+                          <div class="col-3">
+                            <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Another action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Something else here</a></li>
+                          </div>
+                          <div class="col-3">
+                            <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Another action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Something else here</a></li>
+                          </div>
+                          <div class="col-3">
+                            <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Another action</a></li>
+                            <li><a class="dropdown-item item-custom" href="#">Something else here</a></li>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                
+              </li>
+              <li class="nav-item nav-item-custom">
+                <a class="nav-link nav-link-custom" href="#booking-section">Booking</a>
+              </li>
+              <li class="nav-item nav-item-custom">
+                <a class="nav-link nav-link-custom" href="#about-us">About us</a>
+              </li>
+            </ul>
+
+            <!-- button -->
+            <ul class="account">
+              <li class="dropdown">
+                <a class="btn-login-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Borrowing</a></li>
+                    <li><a class="dropdown-item" href="#">Bookmark</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                  </ul>
+              </li>
+            </ul>
+         </div>
+    </nav>
+
+    <div class="container container-custom">
+        <div class="row row-1-custom">
+          <div class="col-lg-4">
+            <div class="card card-custom">
+              <div class="card-rectangle">
+                <a href="detail.html">
+                  <img src="assets/img/member/5203299.jpg" class="card-img-top card-img-custom" alt="...">
+                </a>
+              </div>
+              <div class="card-body card-body-custom">
+                <p><b>Arvi Rizqi Fadhila</b></p>
+                <p><span>22.11.4693</span></p>
+                <p><span>Mahasiswa</span></p>
+                <p><span>Lorem ipsum dolor sit amet.</span></p>
+                <div class="sosmed-col row" >
+                    <div class="col-lg-3"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-linkedin fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-custom">
+              <div class="card-rectangle">
+                <a href="detail.html">
+                  <img src="assets/img/member/5203299.jpg" class="card-img-top card-img-custom" alt="...">
+                </a>
+              </div>
+              <div class="card-body card-body-custom">
+                <p><b>Arvi Rizqi Fadhila</b></p>
+                <p><span>22.11.4693</span></p>
+                <p><span>Mahasiswa</span></p>
+                <p><span>Lorem ipsum dolor sit amet.</span></p>
+                <div class="sosmed-col row" >
+                    <div class="col-lg-3"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-linkedin fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-custom">
+              <div class="card-rectangle">
+                <a href="detail.html">
+                  <img src="assets/img/member/5203299.jpg" class="card-img-top card-img-custom" alt="...">
+                </a>
+              </div>
+              <div class="card-body card-body-custom">
+                <p><b>Arvi Rizqi Fadhila</b></p>
+                <p><span>22.11.4693</span></p>
+                <p><span>Mahasiswa</span></p>
+                <p><span>Lorem ipsum dolor sit amet.</span></p>
+                <div class="sosmed-col row" >
+                    <div class="col-lg-3"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-linkedin fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3"></div>
+
+          <div class="col-lg-3">
+            <div class="card card-custom">
+              <div class="card-rectangle">
+                <a href="detail.html">
+                  <img src="assets/img/member/5203299.jpg" class="card-img-top card-img-custom" alt="...">
+                </a>
+              </div>
+              <div class="card-body card-body-custom">
+                <p><b>Arvi Rizqi Fadhila</b></p>
+                <p><span>22.11.4693</span></p>
+                <p><span>Mahasiswa</span></p>
+                <p><span>Lorem ipsum dolor sit amet.</span></p>
+                <div class="sosmed-col row" >
+                    <div class="col-lg-3"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-linkedin fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card card-custom">
+              <div class="card-rectangle">
+                <a href="detail.html">
+                  <img src="assets/img/member/5203299.jpg" class="card-img-top card-img-custom" alt="...">
+                </a>
+              </div>
+              <div class="card-body card-body-custom">
+                <p><b>Arvi Rizqi Fadhila</b></p>
+                <p><span>22.11.4693</span></p>
+                <p><span>Mahasiswa</span></p>
+                <p><span>Lorem ipsum dolor sit amet.</span></p>
+                <div class="sosmed-col row" >
+                    <div class="col-lg-3"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-brands fa-linkedin fa-2xl"></i></div>
+                    <div class="col-lg-3"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3"></div>
+
+        </div>
+    </div>
     
 </body>
 </html>
