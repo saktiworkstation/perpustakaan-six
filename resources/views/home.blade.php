@@ -1,107 +1,197 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container my-5">
-        <div class="row my-4 pt-5">
-            <div class="col-5 mt-5">
-                <p class="fs-1 fw-bold pt-5">Lazy to borrow Book manually, start with us</p>
-                <div class="col-10 mt-2">
-                    <p class="fs-5">We provide what you need to enjoy Ease of borrowing books from anywhere, both physical
-                        book
-                        and
-                        E-books</p>
+    <!-- hero section -->
+    <div class="hero" id="hero-section">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="main-text text-start">
+                        <h1 class="text-hero">lazy to borrow books manually, start with us</h1>
+                        <p class="second-text-hero">We provide what you need to enjoy
+                            Ease of borrowing books from anywhere, both physical books and e-books.</p>
+                        <button type="button" class="btn btn-hero-custom ">View more</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image">
+                        <div class="rectangle"></div>
+                        <img src="/img/hero-pict.jpg" class="img-fluid img-hero-custom" alt="...">
+                    </div>
                 </div>
             </div>
-            <div class="col-7 d-flex justify-content-end align-items-center position-relative d-inline-block">
-                <img class="home-img position-absolute" src="https://source.unsplash.com/670x340/?Library">
-                <div class="letak-border-img style-border-img"></div>
-            </div>
         </div>
-        <div class="row">
-            <p class="fs-3 fw-semibold pt-5">Book list</p>
-            <div class="row d-flex d-inline-block">
-                @foreach ($books as $book)
-                    <div class="col-3 style-box-buku d-block mx-3 pb-2 mb-3" style="width: 290px">
-                        <div class="row d-flex justify-content-center">
-                            <img class="rounded mt-3" src="https://source.unsplash.com/260x260/?book" alt=""
-                                width="260" height="260">
+    </div>
+
+    <!-- content section -->
+    <div class="content" id="content-section">
+        <div class="container container-content">
+            <h1 class="text-header">Book List</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card card-custom">
+                        <div class="card-rectangle">
+                            <div class="available">
+                                <p>available : 1</p>
+                            </div>
+                            <a href="detail.html">
+                                <img src="/img/apitauhid.png" class="card-img-top card-img-custom" alt="...">
+                            </a>
                         </div>
-                        <p class="fs-5 fw-medium mb-0 text-over">{{ $book->title }}</p>
-                        <p class="mb-0">Genre: Social, Action</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="15" viewBox="0 0 75 15"
-                            fill="none">
-                            <path
-                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                fill="#FFD700" />
-                            <path
-                                d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                fill="#FFD700" />
-                            <path
-                                d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                fill="#FFD700" />
-                            <path
-                                d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                fill="#FFD700" />
-                            <path
-                                d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                fill="#D9D9D9" />
-                            <path
-                                d="M67.5 0L67.5 6.5L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                fill="#FFD700" />
-                        </svg>
-                        <div class="col-12 d-grid gap-1">
-                            <a class="btn bg-info shadow" href="">Borrow Now</a>
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title card-title-custom">Orang-orang biasa</h5>
+                            <p class="card-text card-text-custom">Genre: Social, Education</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            </div>
+                            <button type="button" class="btn btn-card-custom"><a href="#">View More</a></button>
                         </div>
                     </div>
-                @endforeach
+                </div>
             </div>
+
             <div class="d-flex justify-content-end">
                 {{ $books->links() }}
             </div>
         </div>
     </div>
 
-    <div class="container-fluid bg-room">
+    <!-- booking section -->
+    <div class="booking" id="booking-section">
         <div class="container">
-            <div class="row py-5">
-                <p class="fs-3 fw-semibold pt-2">Booking Room</p>
-                <div class="col-6 d-flex align-items-start position-relative d-inline-block">
-                    <img class="home-img" src="https://source.unsplash.com/470x260/?meetingRoom">
+            <h1 class="text-header">Booking Room</h1>
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="image">
+                        <div class="rectangle-booking"></div>
+                        <img src="/img/booking.jpg" class="img-fluid img-booking-custom" alt="...">
+                    </div>
                 </div>
-                <div class="col-6 mt-5">
-                    <div class="col-10 mt-2">
-                        <p class="fs-5">
-                            We provide what you need to enjoy Ease of borrowing books from anywhere, both physical
-                            book
-                            and
-                            E-books
-                        </p>
-                        <a class="btn bg-info shadow btn-glow text-light" href="">Booking Now</a>
+                <div class="col">
+                    <div class="main-text text-start">
+                        <p class="second-text-booking">Start the meeting with a comfortable room without interruptions and
+                            queues. Organize everything from anywhere without worrying about the room being full.</p>
+                        <button type="button" class="btn btn-hero-custom" data-bs-toggle="modal"
+                            data-bs-target="#myModal-booking" data-bs-whatever="@getbootstrap">Booking Now</button>
+                        <div class="modal fade backdrop-custom" id="myModal-booking" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <button type="button" class="btn-close close-custom" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <div class="container modal-dialog modal-dialog-centered">
+                                <div class="modal-dialog-booking-custom">
+                                    <div class="modal-content modal-custom">
+                                        <div class="modal-body modal-booking-custom">
+                                            <div class="modal-header">
+                                                <Sign class="modal-title fs-5 title-modal-custom">Booking Room</h1>
+                                            </div>
+                                            <form>
+                                                <input class="mb-3">
+                                                <label for="booking-time"
+                                                    class="col-form-label label-booking-custom">Time</label>
+                                                <input type="datetime" class="form-control form-booking-custom"
+                                                    id="booking-time" placeholder="Time Borrow"></input>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="booking-date"
+                                                class="col-form-label label-booking-custom">Date</label>
+                                            <input type="datetime" class="form-control form-booking-custom" id="booing-date"
+                                                placeholder="Date Borrow"></input>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="room" class="col-form-label label-booking-custom">Choose
+                                                Room</label>
+                                            <select name="room" id="room"
+                                                class="form-booking-custom choose-custom">
+                                                <option class="dropdown-item item-custom" value="Regular">Regular</option>
+                                                <option class="dropdown-item item-custom" value="Meeting Room">Meeting
+                                                    Room</option>
+                                                <option class="dropdown-item item-custom" value="VIP">VIP</option>
+                                                <option class="dropdown-item item-custom" value="VVIP">VVIP</option>
+                                            </select>
+                                        </div>
+                                        </form>
+                                        <button type="submit" class="btn btn-primary btn-primary-custom">Booking</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- about us -->
+    <div class="about-us" id="about-us">
+        <div class="container">
+            <h1 class="text-header">About us</h1>
+            <div class="row align-items-start">
+                <div class="col col-custom">
+                    <div class="main-text-us text-start">
+                        <p class="second-text-about">Start the meeting with a comfortable room without interruptions and
+                            queues. Organize everything from anywhere without worrying about the room being full.</p>
+                        <a href="member.html"><button type="button" class="btn btn-hero-custom ">View
+                                Member</button></a>
+                    </div>
+                </div>
+                <div class="col col-custom">
+                    <div class="image">
+                        <img src="/img/team.png" class="img-fluid img-booking-custom" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <!-- footer -->
+    <footer>
         <div class="container">
-            <div class="row py-5">
-                <p class="fs-3 fw-semibold pt-2">About Us</p>
-                <div class="col-7 mt-5  d-flex align-items-center">
-                    <div class="col-10 mt-2">
-                        <p class="fs-5">
-                            We provide what you need to enjoy Ease of borrowing books from anywhere, both physical
-                            book
-                            and
-                            E-books
-                        </p>
-                        <a class="btn bg-info shadow btn-glow text-light" href="">Booking Now</a>
+            <div class="row align-items-start footer-list">
+                <div class="right col-lg-4 col-sm-12">
+                    <div class="logo">
+                        <a class="navbar-brand title-footer" href="#"><span class="first">Oasis</span><span
+                                class="second">pavilion</span></a>
+                        <p>instant library can be accessed from anywhere</p>
                     </div>
                 </div>
-                <div class="col-5 d-flex justify-content-end align-items-center position-relative d-inline-block">
-                    <img src="/img/aboutus.png" style="height: 360">
+                <div class="link-boxes col-lg-8 col-sm-12">
+                    <div class="row align-item-start">
+                        <ul class="box col-4">
+                            <li class="link-name">For Beginners</li>
+                            <li><a href="#">New Account</a></li>
+                            <li><a href="#">Start Borrow a Book</a></li>
+                            <li><a href="#">Start Booking a Room</a></li>
+                        </ul>
+                        <ul class="box col-4">
+                            <li class="link-name">Explore Us</li>
+                            <li><a href="#">Our Carrers</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Send Feedback</a></li>
+                        </ul>
+                        <ul class="box col-4">
+                            <li class="link-name">Connect Us</li>
+                            <li><a href="#">support@Oasispavilion.co.id</a></li>
+                            <li><a href="#">021-3456-7890</a></li>
+                            <li><a href="#">Oasispavilion, Depok, Jogjakarta</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <p class="text-center copyright-text">Copyright 2023 • All rights reserved • Oasisipavilion</p>
         </div>
-    </div>
+    </footer>
+
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+    </script>
 @endsection

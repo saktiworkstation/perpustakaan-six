@@ -1,129 +1,187 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-body fixed-top">
+<!-- navigation -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom ">
     <div class="container">
-        <a class="navbar-brand" href="/">Oasis Pavilion</a>
+        <!-- logo -->
+        <a class="navbar-brand title" href="#hero-section"><span class="first">Oasis</span><span
+                class="second">pavilion</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- navbar -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search"
-                        style="width: 500px;">
-                </form>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Book List</a>
+
+            <!-- search -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-search-custom" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <!-- navlink -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-custom">
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link nav-link-custom active-custom" aria-current="page" href="#content-section">Book
+                        list</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <li class="nav-item dropdown nav-item-custom">
+                    <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Category
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <div class="dropdown-menu dropdown-custom">
+                        <div class="row">
+                            <div class="col-2">
+                                <ul class="theme-category">
+                                    <h2 class="drop-title">Theme</h2>
+                                    <li><a class="dropdown-item item-custom" href="#">Novels</a></li>
+                                    <li><a class="dropdown-item item-custom" href="#">Prose</a></li>
+                                    <li><a class="dropdown-item item-custom" href="#">Short Story</a></li>
+                                    <li><a class="dropdown-item item-custom" href="#">Essay</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-10">
+                                <ul class="genre-category row">
+                                    <h2 class="drop-title">Genre</h2>
+                                    <div class="col-3">
+                                        <li><a class="dropdown-item item-custom" href="#">Action</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Adventure</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Comedy</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Drama</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Fantasy</a></li>
+                                    </div>
+                                    <div class="col-3">
+                                        <li><a class="dropdown-item item-custom" href="#">Romance</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Gore</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Historical</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Horror</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Thriller</a></li>
+                                    </div>
+                                    <div class="col-3">
+                                        <li><a class="dropdown-item item-custom" href="#">Fanfiction</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Sci-fi</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Realistic Fiction</a>
+                                        </li>
+                                        <li><a class="dropdown-item item-custom" href="#">Suspense</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Mystery</a></li>
+                                    </div>
+                                    <div class="col-3">
+                                        <li><a class="dropdown-item item-custom" href="#">Encyclopedia</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Biography</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Anthology</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Self Improvment</a></li>
+                                        <li><a class="dropdown-item item-custom" href="#">Religion</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Booking</a>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link nav-link-custom" href="#booking-section">Booking</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About As</a>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link nav-link-custom" href="#about-us">About us</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
-                @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Welcome back, {{ auth()->user()->name }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i>
-                                    Dashboard</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button class="dropdown-item" type="submit">
-                                        <i class="bi bi-box-arrow-in-right"></i> Logout
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @else
-                    <li class="nav-item me-2">
-                        <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Sign In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/register" class="nav-link btn bg-info shadow btn-glow text-light">Sign Up</a>
-                    </li>
-                @endauth
-            </ul>
+
+            <!-- button -->
+            <button type="button" class="btn btn-login-custom" data-bs-toggle="modal" data-bs-target="#myModal"
+                data-bs-whatever="@getbootstrap">Sign in</button>
+            <div class="modal fade backdrop-custom" id="myModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <button type="button" class="btn-close close-custom" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-dialog modal-dialog-custom">
+                    <div class="modal-content modal-custom">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 title-modal-custom">Sign In</h1>
+                        </div>
+                        <div class="modal-body modal-body-custom">
+                            <div class="row row-modal-custom ">
+                                <div class="col-6 col-modal-custom">
+                                    <button class="btn btn-modal-login-custom"><a href="">Sign in</a></button>
+                                </div>
+                                <div class="col-6 col-modal-custom">
+                                    <button class="btn btn-modal-regis-custom"><a href="">Sign up</a></button>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label label-custom">Email</label>
+                                    <input type="text" class="form-control form-custom" id="recipient-name"
+                                        placeholder="Enter Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label label-custom">Password</label>
+                                    <input type="password" class="form-control form-custom" id="message-text"
+                                        placeholder="Enter Password"></input>
+                                </div>
+                                <p>Forgot <a href="#">Password</a>?</p>
+                            </form>
+                            <button type="button" class="btn btn-primary btn-primary-custom">Sign in</button>
+                            <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
+                            <p class="text-center">don't have an account yet? <a href="#">register </a>now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-regis-custom" data-bs-toggle="modal"
+                data-bs-target="#myModal-regis" data-bs-whatever="@getbootstrap">Sign up</button>
+            <div class="modal fade backdrop-custom" id="myModal-regis" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <button type="button" class="btn-close close-custom" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-dialog modal-dialog-custom">
+                    <div class="modal-content modal-custom">
+                        <div class="modal-header">
+                            <Sign class="modal-title fs-5 title-modal-custom">Sign Up</h1>
+                        </div>
+                        <div class="modal-body modal-body-custom">
+                            <div class="row row-modal-custom ">
+                                <div class="col-6 col-modal-custom">
+                                    <button type="button" class="btn btn-modal-regis-custom custom-rounded"><a
+                                            href="#">Sign in</a></button>
+                                </div>
+                                <div class="col-6 col-modal-custom">
+                                    <button type="button" class="btn btn-modal-login-custom custom-rounded-2"><a
+                                            href="">Sign up</a></button>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label label-custom">Email</label>
+                                    <input type="text" class="form-control form-custom" id="recipient-name"
+                                        placeholder="Enter Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label label-custom">Fullname</label>
+                                    <input class="form-control form-custom" id="message-text"
+                                        placeholder="Enter Name"></input>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label label-custom">Password</label>
+                                    <input type="password" class="form-control form-custom" id="message-text"
+                                        placeholder="Enter Password"></input>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label label-custom">Confirm
+                                        Password</label>
+                                    <input type="password" class="form-control form-custom" id="message-text"
+                                        placeholder="Confirm Password"></input>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary btn-primary-custom">Sign up</button>
+                            <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
+                            <p class="text-center">already have an account? <a href="#">login </a>now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
-
-{{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">Healty Fitness</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page"
-                        href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ $title === 'About' ? 'active' : '' }}" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ $title === 'Promotions' ? 'active' : '' }}" href="/promotions">Promotions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ $title === 'Services' ? 'active' : '' }}" href="/services">Services</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto">
-                @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Welcome back, {{ auth()->user()->name }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/dashboard"><i
-                                        class="bi bi-layout-text-window-reverse"></i>
-                                    Dashboard</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button class="dropdown-item" type="submit">
-                                        <i class="bi bi-box-arrow-in-right"></i> Logout
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login</a>
-                    </li>
-                @endauth
-            </ul>
-        </div>
-    </div>
-</nav> --}}
