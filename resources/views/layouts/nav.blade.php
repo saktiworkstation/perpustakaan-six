@@ -88,7 +88,7 @@
                 </li>
             </ul>
 
-            <!-- button -->
+            {{-- Modal Sign In --}}
             <button type="button" class="btn btn-login-custom" data-bs-toggle="modal" data-bs-target="#myModal"
                 data-bs-whatever="@getbootstrap">Sign in</button>
             <div class="modal fade backdrop-custom" id="myModal" tabindex="-1"
@@ -99,6 +99,13 @@
                     <div class="modal-content modal-custom">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5 title-modal-custom">Sign In</h1>
+                            @if (session()->has('loginError'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {{ session('loginError') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            @endif
                         </div>
                         <div class="modal-body modal-body-custom">
                             <div class="row row-modal-custom ">
@@ -106,30 +113,44 @@
                                     <button class="btn btn-modal-login-custom"><a href="">Sign in</a></button>
                                 </div>
                                 <div class="col-6 col-modal-custom">
-                                    <button class="btn btn-modal-regis-custom"><a href="">Sign up</a></button>
+                                    <button class="btn btn-modal-regis-custom" data-bs-toggle="modal"
+                                        data-bs-target="#myModal-regis" data-bs-whatever="@getbootstrap">Sign
+                                        up</button>
                                 </div>
                             </div>
-                            <form>
+                            <form action="/login" method="POST">
+                                @csrf
                                 <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label label-custom">Email</label>
-                                    <input type="text" class="form-control form-custom" id="recipient-name"
-                                        placeholder="Enter Email">
+                                    <label for="email" class="col-form-label label-custom">Email</label>
+                                    <input type="email" name="email"
+                                        class="form-control form-custom @error('email') is-invalid @enderror"
+                                        id="email" placeholder="name@example.com" value="{{ old('email') }}"
+                                        required autofocus id="email">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="message-text" class="col-form-label label-custom">Password</label>
-                                    <input type="password" class="form-control form-custom" id="message-text"
-                                        placeholder="Enter Password"></input>
+                                    <input type="password" name="password"class="form-control form-custom"
+                                        id="password" placeholder="Password" required></input>
                                 </div>
-                                <p>Forgot <a href="#">Password</a>?</p>
+                                {{-- <p>Forgot <a href="#">Password</a>?</p> --}}
+
+                                <button type="submit" class="btn btn-primary btn-primary-custom">Sign in</button>
                             </form>
-                            <button type="button" class="btn btn-primary btn-primary-custom">Sign in</button>
                             <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
-                            <p class="text-center">don't have an account yet? <a href="#">register </a>now</p>
+                            <p class="text-center">don't have an account yet? <a href=""
+                                    data-bs-toggle="modal" data-bs-target="#myModal-regis"
+                                    data-bs-whatever="@getbootstrap">register </a>now</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {{-- Modal Sigin Up --}}
             <button type="button" class="btn btn-regis-custom" data-bs-toggle="modal"
                 data-bs-target="#myModal-regis" data-bs-whatever="@getbootstrap">Sign up</button>
             <div class="modal fade backdrop-custom" id="myModal-regis" tabindex="-1"
@@ -140,12 +161,20 @@
                     <div class="modal-content modal-custom">
                         <div class="modal-header">
                             <Sign class="modal-title fs-5 title-modal-custom">Sign Up</h1>
+                                @if (session()->has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ session('success') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                @endif
                         </div>
                         <div class="modal-body modal-body-custom">
                             <div class="row row-modal-custom ">
                                 <div class="col-6 col-modal-custom">
-                                    <button type="button" class="btn btn-modal-regis-custom custom-rounded"><a
-                                            href="#">Sign in</a></button>
+                                    <button type="button" class="btn btn-modal-regis-custom custom-rounded"
+                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                        data-bs-whatever="@getbootstrap">Sign in</button>
                                 </div>
                                 <div class="col-6 col-modal-custom">
                                     <button type="button" class="btn btn-modal-login-custom custom-rounded-2"><a
@@ -175,9 +204,9 @@
                                         placeholder="Confirm Password"></input>
                                 </div>
                             </form>
-                            <button type="button" class="btn btn-primary btn-primary-custom">Sign up</button>
-                            <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
-                            <p class="text-center">already have an account? <a href="#">login </a>now</p>
+                            <button type="submit" class="btn btn-primary btn-primary-custom">Sign up</button>
+                            <p class="text-center">already have an account? <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#myModal" data-bs-whatever="@getbootstrap">login </a>now</p>
                         </div>
                     </div>
                 </div>
