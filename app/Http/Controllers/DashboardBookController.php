@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Cviebrock\EloquentSluggable\Tests\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class DashboardBookController extends Controller
@@ -62,7 +63,9 @@ class DashboardBookController extends Controller
      */
     public function show(Book $book)
     {
-        return Response('hello');
+        return Response(view('detail', [
+            'book' => $book
+        ]));
     }
 
     /**
@@ -121,7 +124,7 @@ class DashboardBookController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug = SlugService::createSlug(Book::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
     }
 }

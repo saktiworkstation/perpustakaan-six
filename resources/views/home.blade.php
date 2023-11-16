@@ -28,33 +28,42 @@
         <div class="container container-content">
             <h1 class="text-header">Book List</h1>
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="card card-custom">
-                        <div class="card-rectangle">
-                            <div class="available">
-                                <p>available : 1</p>
+                @foreach ($books as $book)
+                    <div class="col-lg-3 d-block mb-4">
+                        <div class="card card-custom">
+                            <div class="card-rectangle">
+                                <div class="available">
+                                    <p>available : {{ $book->stok }}</p>
+                                </div>
+                                <a href="detail.html">
+                                    <img src="/img/apitauhid.png" class="card-img-top card-img-custom">
+                                </a>
                             </div>
-                            <a href="detail.html">
-                                <img src="/img/apitauhid.png" class="card-img-top card-img-custom" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body card-body-custom">
-                            <h5 class="card-title card-title-custom">Orang-orang biasa</h5>
-                            <p class="card-text card-text-custom">Genre: Social, Education</p>
-                            <div class="rating">
-                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
-                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
-                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
-                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
-                                <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                            <div class="card-body card-body-custom">
+                                <h5 class="card-title card-title-custom text-over">{{ $book->title }}</h5>
+                                <p class="card-text card-text-custom">Genre: Social, Education</p>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffd700;"></i>
+                                </div>
+                                @auth
+                                    <button type="button" class="btn btn-card-custom"><a
+                                            href="/dashboard/books/{{ $book->slug }}"><a href="">View More</a></button>
+                                @else
+                                    <button type="button" class="btn btn-card-custom"
+                                        onclick="alert('Anda harus login terlebih dahulu!')"><a href="">View
+                                            More</a></button>
+                                @endauth
                             </div>
-                            <button type="button" class="btn btn-card-custom"><a href="#">View More</a></button>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
 
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end mb-5">
                 {{ $books->links() }}
             </div>
         </div>
