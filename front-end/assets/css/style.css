@@ -30,6 +30,9 @@ html{
     border: 1px solid #fff;
 }
 
+.col-modal-custom button a:hover{
+    color: inherit;
+}
 /* navbar */
 .navbar-custom{
     width: 100%;
@@ -76,6 +79,11 @@ html{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    color: #000;
+}
+
+.nav-link-custom:hover{
+    color: #152C5B;
 }
 
 .nav-link-custom{
@@ -428,6 +436,7 @@ html{
 .page{
     width: 100%;
     margin-top: 30px;
+    padding-right: 20px;
 }
 /* booking */
 .booking{
