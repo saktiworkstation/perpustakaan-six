@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom ">
     <div class="container">
         <!-- logo -->
-        <a class="navbar-brand title" href="#hero-section"><span class="first">Oasis</span><span
+        <a class="navbar-brand title" href="/"><span class="first">Oasis</span><span
                 class="second">pavilion</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

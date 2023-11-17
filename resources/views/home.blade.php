@@ -51,7 +51,8 @@
                                 </div>
                                 @auth
                                     <button type="button" class="btn btn-card-custom"><a
-                                            href="/dashboard/books/{{ $book->slug }}"><a href="">View More</a></button>
+                                            href="/dashboard/books/{{ $book->slug }}"><a
+                                                href="/dashboard/books/{{ $book->slug }}">View More</a></button>
                                 @else
                                     <button type="button" class="btn btn-card-custom"
                                         onclick="alert('Anda harus login terlebih dahulu!')"><a href="">View
