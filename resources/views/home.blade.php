@@ -52,7 +52,8 @@
                                 @auth
                                     <button type="button" class="btn btn-card-custom"><a
                                             href="/dashboard/books/{{ $book->slug }}"><a
-                                                href="/dashboard/books/{{ $book->slug }}">View More</a></button>
+                                                href="/dashboard/books/{{ $book->slug }}" class="text-white">View
+                                                More</a></button>
                                 @else
                                     <button type="button" class="btn btn-card-custom"
                                         onclick="alert('Anda harus login terlebih dahulu!')"><a href="">View
@@ -99,32 +100,32 @@
                                                 <Sign class="modal-title fs-5 title-modal-custom">Booking Room</h1>
                                             </div>
                                             <form>
-                                                <input class="mb-3">
+                                                {{-- <input class="mb-3"> --}}
                                                 <label for="booking-time"
-                                                    class="col-form-label label-booking-custom">Time</label>
+                                                    class="col-form-label label-booking-custom mt-5">Time</label>
                                                 <input type="datetime" class="form-control form-booking-custom"
                                                     id="booking-time" placeholder="Time Borrow"></input>
+                                                <label for="booking-date"
+                                                    class="col-form-label label-booking-custom mt-4">Date</label>
+                                                <input type="datetime" class="form-control form-booking-custom"
+                                                    id="booing-date" placeholder="Date Borrow"></input>
+                                                {{-- select --}}
+                                                <label for="room"
+                                                    class="col-form-label label-booking-custom mt-4">Choose
+                                                    Room</label>
+                                                <select name="room" id="room"
+                                                    class="form-booking-custom choose-custom">
+                                                    <option class="dropdown-item item-custom" value="Regular">Regular
+                                                    </option>
+                                                    <option class="dropdown-item item-custom" value="Meeting Room">Meeting
+                                                        Room</option>
+                                                    <option class="dropdown-item item-custom" value="VIP">VIP</option>
+                                                    <option class="dropdown-item item-custom" value="VVIP">VVIP</option>
+                                                </select>
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-primary-custom my-5">Booking</button>
+                                            </form>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="booking-date"
-                                                class="col-form-label label-booking-custom">Date</label>
-                                            <input type="datetime" class="form-control form-booking-custom" id="booing-date"
-                                                placeholder="Date Borrow"></input>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="room" class="col-form-label label-booking-custom">Choose
-                                                Room</label>
-                                            <select name="room" id="room"
-                                                class="form-booking-custom choose-custom">
-                                                <option class="dropdown-item item-custom" value="Regular">Regular</option>
-                                                <option class="dropdown-item item-custom" value="Meeting Room">Meeting
-                                                    Room</option>
-                                                <option class="dropdown-item item-custom" value="VIP">VIP</option>
-                                                <option class="dropdown-item item-custom" value="VVIP">VVIP</option>
-                                            </select>
-                                        </div>
-                                        </form>
-                                        <button type="submit" class="btn btn-primary btn-primary-custom">Booking</button>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +134,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- about us -->
