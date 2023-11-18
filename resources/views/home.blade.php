@@ -35,7 +35,7 @@
                                 <div class="available">
                                     <p>available : {{ $book->stok }}</p>
                                 </div>
-                                <a href="detail.html">
+                                <a href="/dashboard/books/{{ $book->slug }}">
                                     <img src="/img/apitauhid.png" class="card-img-top card-img-custom">
                                 </a>
                             </div>
@@ -86,8 +86,14 @@
                     <div class="main-text text-start">
                         <p class="second-text-booking">Start the meeting with a comfortable room without interruptions and
                             queues. Organize everything from anywhere without worrying about the room being full.</p>
-                        <button type="button" class="btn btn-hero-custom" data-bs-toggle="modal"
-                            data-bs-target="#myModal-booking" data-bs-whatever="@getbootstrap">Booking Now</button>
+                        @auth
+                            <button type="button" class="btn btn-hero-custom" data-bs-toggle="modal"
+                                data-bs-target="#myModal-booking" data-bs-whatever="@getbootstrap">Booking Now</button>
+                        @else
+                            <button type="button" class="btn btn-card-custom"
+                                onclick="alert('Anda harus login terlebih dahulu!')"><a href="">View
+                                    More</a></button>
+                        @endauth
                         <div class="modal fade backdrop-custom" id="myModal-booking" tabindex="-1"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <button type="button" class="btn-close close-custom" data-bs-dismiss="modal"
@@ -99,15 +105,17 @@
                                             <div class="modal-header">
                                                 <Sign class="modal-title fs-5 title-modal-custom">Booking Room</h1>
                                             </div>
-                                            <form>
+                                            <form method="post" action="/dashboard/bookings/confirm"
+                                                enctype="multipart/form-data">
+                                                @csrf
                                                 {{-- <input class="mb-3"> --}}
                                                 <label for="booking-time"
                                                     class="col-form-label label-booking-custom mt-5">Time</label>
-                                                <input type="datetime" class="form-control form-booking-custom"
+                                                <input type="time" class="form-control form-booking-custom"
                                                     id="booking-time" placeholder="Time Borrow"></input>
                                                 <label for="booking-date"
                                                     class="col-form-label label-booking-custom mt-4">Date</label>
-                                                <input type="datetime" class="form-control form-booking-custom"
+                                                <input type="date" class="form-control form-booking-custom"
                                                     id="booing-date" placeholder="Date Borrow"></input>
                                                 {{-- select --}}
                                                 <label for="room"

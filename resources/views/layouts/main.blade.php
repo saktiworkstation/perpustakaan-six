@@ -9,7 +9,12 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+
+    @if (Request::is('dashboard/books*'))
+        <link rel="stylesheet" href="{{ asset('/css/detail.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    @endif
 
     <!-- font -->
     <link

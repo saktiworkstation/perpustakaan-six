@@ -28,11 +28,12 @@
                         <p>Publisher : <span>{{ $book->penerbit }}</span></p>
                         <p>Year of publication : <span>{{ $book->thn_terbit }}</span></p>
                         <p>Availabe : <span>{{ $book->stok }}</span></p>
+                        <button type="button" class="btn btn-card-custom mb-5">Borrow</button>
                     </div>
                 </div>
                 <div class="row row-sinopsis">
                     <h1 class="sinopsis-head">Sinopsis</h1>
-                    <p>{{ $book->descriptions }}</p>
+                    <p>{!! $book->descriptions !!}</p>
                 </div>
                 <div class="row ulasan-row">
                     <h1 class="ulasan-head">Review</h1>
