@@ -159,3 +159,24 @@ span{
     background-color: #42E7F1;
     margin-top: 10px;
 }
+
+.btn-login-custom{
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 550;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    font-color: #fff;
+}
+
+a:visited {
+    color: inherit;
+}

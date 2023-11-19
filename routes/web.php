@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardBookController;
 use App\Http\Controllers\DashboardLoanController;
 use App\Http\Controllers\DashboardRoomController;
 use App\Http\Controllers\DashboardBookingRoomController;
+use App\Models\Room;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/', function () {
     return view('home', [
         'title' => 'Home',
         'books' => Book::latest()->paginate('8'),
+        'rooms' => Room::latest()->get(),
     ]);
 });
 

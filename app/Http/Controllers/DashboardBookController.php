@@ -64,7 +64,8 @@ class DashboardBookController extends Controller
     public function show(Book $book)
     {
         return Response(view('detail', [
-            'book' => $book
+            'book' => $book,
+            'books' => Book::latest()->get(),
         ]));
     }
 

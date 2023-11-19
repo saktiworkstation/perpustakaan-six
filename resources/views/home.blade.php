@@ -111,24 +111,40 @@
                                                 {{-- <input class="mb-3"> --}}
                                                 <label for="booking-time"
                                                     class="col-form-label label-booking-custom mt-5">Time</label>
-                                                <input type="time" class="form-control form-booking-custom"
-                                                    id="booking-time" placeholder="Time Borrow"></input>
+                                                <input type="time"
+                                                    class="form-control form-booking-custom @error('waktu_pesan') is-invalid @enderror"
+                                                    placeholder="Time Borrow" id="jam" name="jam" required
+                                                    value="{{ old('jam') }}"></input>
+                                                @error('jam')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+
                                                 <label for="booking-date"
                                                     class="col-form-label label-booking-custom mt-4">Date</label>
-                                                <input type="date" class="form-control form-booking-custom"
-                                                    id="booing-date" placeholder="Date Borrow"></input>
+                                                <input name="waktu_pesan" type="date"
+                                                    class="form-control form-booking-custom @error('jam') is-invalid @enderror"
+                                                    id="waktu_pesan" placeholder="Date Borrow" required
+                                                    value="{{ old('waktu_pesan') }}"></input>
+                                                @error('waktu_pesan')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+
                                                 {{-- select --}}
                                                 <label for="room"
                                                     class="col-form-label label-booking-custom mt-4">Choose
                                                     Room</label>
-                                                <select name="room" id="room"
+                                                <select name="room_id" id="room_id"
                                                     class="form-booking-custom choose-custom">
-                                                    <option class="dropdown-item item-custom" value="Regular">Regular
-                                                    </option>
-                                                    <option class="dropdown-item item-custom" value="Meeting Room">Meeting
-                                                        Room</option>
-                                                    <option class="dropdown-item item-custom" value="VIP">VIP</option>
-                                                    <option class="dropdown-item item-custom" value="VVIP">VVIP</option>
+                                                    @foreach ($rooms as $room)
+                                                        @if ($room->status == 1)
+                                                            <option value="{{ $room->id }}">{{ $room->nama }}
+                                                            </option>
+                                                        @endif
+                                                    @endforeach
                                                 </select>
                                                 <button type="submit"
                                                     class="btn btn-primary btn-primary-custom my-5">Booking</button>
