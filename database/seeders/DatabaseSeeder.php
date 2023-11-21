@@ -8,6 +8,7 @@ use App\Models\Room;
 use App\Models\User;
 use App\Models\BookReturn;
 use App\Models\BookingRoom;
+use App\Models\Review;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

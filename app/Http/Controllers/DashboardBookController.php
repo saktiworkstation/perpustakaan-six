@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\Tests\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -66,7 +67,11 @@ class DashboardBookController extends Controller
         return Response(view('detail', [
             'book' => $book,
             'books' => Book::latest()->get(),
-        ]));
+            'user_review' => Review::where('user_id', $book->id)->get(),
+            'review' => Review::where('user_id', '!=', $book->id)
+                                ->latest()
+                                ->take(10)
+                                ->get()]));
     }
 
     /**

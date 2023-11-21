@@ -4,8 +4,8 @@
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" hrefaria-current="page"
                     href="/dashboard">
-                    <span data-feather="home"></span>
-                    Dashboard
+                    <span data-feather="user"></span>
+                    User-Dashoard
                 </a>
                 <a class="nav-link {{ Request::is('/dashboard/books') ? 'active' : '' }}" hrefaria-current="page"
                     href="/dashboard/books">
