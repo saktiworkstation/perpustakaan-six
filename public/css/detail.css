@@ -180,3 +180,15 @@ a{
 a:visited {
     color: inherit;
 }
+
+.btn-borrow-custom{
+    width: 40%;
+    height: 35px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    background-color: #42E7F1;
+    margin-top: 10px;
+}

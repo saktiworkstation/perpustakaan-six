@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Loan;
+use App\Models\Review;
 use App\Models\BookingRoom;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -46,5 +47,9 @@ class User extends Authenticatable
 
     public function booking(){
         return $this->hasMany(BookingRoom::class);
+    }
+
+    public function review(){
+        return $this->hasMany(Review::class);
     }
 }

@@ -50,10 +50,8 @@
                                     <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                                 </div>
                                 @auth
-                                    <button type="button" class="btn btn-card-custom"><a
-                                            href="/dashboard/books/{{ $book->slug }}"><a
-                                                href="/dashboard/books/{{ $book->slug }}" class="text-white">View
-                                                More</a></button>
+                                    <a href="/dashboard/books/{{ $book->slug }}" class="btn btn-card-custom text-white">View
+                                        More</button></a>
                                 @else
                                     <button type="button" class="btn btn-card-custom"
                                         onclick="alert('Anda harus login terlebih dahulu!')"><a href="">View

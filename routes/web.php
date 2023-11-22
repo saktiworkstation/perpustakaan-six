@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardBookController;
 use App\Http\Controllers\DashboardLoanController;
 use App\Http\Controllers\DashboardRoomController;
 use App\Http\Controllers\DashboardBookingRoomController;
+use App\Http\Controllers\ReviewController;
 use App\Models\Room;
 
 /*
@@ -69,3 +70,6 @@ Route::post('/dashboard/bookings/confirm', [DashboardBookingRoomController::clas
 Route::get('/dashboard/bookings/{slug}', [DashboardBookingRoomController::class, 'sewa'])->middleware('auth');
 Route::get('/dashboard/bookings/grantIn/{id}', [DashboardBookingRoomController::class, 'grantIn'])->middleware('auth');
 Route::get('/dashboard/bookings/grantOut/{id}', [DashboardBookingRoomController::class, 'grantOut'])->middleware('auth');
+
+Route::post('/dashboard/reviews/store', [ReviewController::class,'store'])->middleware('auth');
+Route::put('/dashboard/reviews/update/{id}', [ReviewController::class,'update'])->middleware('auth');

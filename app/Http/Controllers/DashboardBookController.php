@@ -64,14 +64,31 @@ class DashboardBookController extends Controller
      */
     public function show(Book $book)
     {
+        $allReviews = Review::where('book_id', $book->id)->latest()->get();
+        $finalRate = 0;
+
+        foreach ($allReviews as $review) {
+            $finalRate += $review->rate;
+        }
+
+        if (count($allReviews) > 0) {
+            $finalRate /= count($allReviews);
+        } else {
+            $finalRate = 0;
+        }
         return Response(view('detail', [
             'book' => $book,
             'books' => Book::latest()->get(),
-            'user_review' => Review::where('user_id', $book->id)->get(),
-            'review' => Review::where('user_id', '!=', $book->id)
-                                ->latest()
-                                ->take(10)
-                                ->get()]));
+            'user_review' => optional(Review::where('user_id', auth()->user()->id)
+                                    ->where('book_id', $book->id)
+                                    ->first()),
+            'reviews' => Review::where('book_id', $book->id)
+                                    // ->where('user_id', '!=', auth()->user()->id)
+                                    ->latest()
+                                    ->get(),
+            'all_reviews' => $allReviews,
+            'final_rate' => $finalRate
+        ]));
     }
 
     /**
