@@ -81,10 +81,10 @@
 
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link nav-link-custom" href="#booking-section">Booking</a>
+                    <a class="nav-link nav-link-custom" href="/#booking-section">Booking</a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link nav-link-custom" href="#about-us">About us</a>
+                    <a class="nav-link nav-link-custom" href="/#about-us">About us</a>
                 </li>
             </ul>
 
