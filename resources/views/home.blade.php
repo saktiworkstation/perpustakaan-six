@@ -167,8 +167,7 @@
                     <div class="main-text-us text-start">
                         <p class="second-text-about">Start the meeting with a comfortable room without interruptions and
                             queues. Organize everything from anywhere without worrying about the room being full.</p>
-                        <a href="member.html"><button type="button" class="btn btn-hero-custom ">View
-                                Member</button></a>
+                        <a href="/aboutus" class="btn btn-hero-custom ">View Member</a>
                     </div>
                 </div>
                 <div class="col col-custom">
@@ -179,44 +178,6 @@
             </div>
         </div>
     </div>
-
-    <!-- footer -->
-    <footer>
-        <div class="container">
-            <div class="row align-items-start footer-list">
-                <div class="right col-lg-4 col-sm-12">
-                    <div class="logo">
-                        <a class="navbar-brand title-footer" href="#"><span class="first">Oasis</span><span
-                                class="second">pavilion</span></a>
-                        <p>instant library can be accessed from anywhere</p>
-                    </div>
-                </div>
-                <div class="link-boxes col-lg-8 col-sm-12">
-                    <div class="row align-item-start">
-                        <ul class="box col-4">
-                            <li class="link-name">For Beginners</li>
-                            <li><a href="#">New Account</a></li>
-                            <li><a href="#">Start Borrow a Book</a></li>
-                            <li><a href="#">Start Booking a Room</a></li>
-                        </ul>
-                        <ul class="box col-4">
-                            <li class="link-name">Explore Us</li>
-                            <li><a href="#">Our Carrers</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Send Feedback</a></li>
-                        </ul>
-                        <ul class="box col-4">
-                            <li class="link-name">Connect Us</li>
-                            <li><a href="#">support@Oasispavilion.co.id</a></li>
-                            <li><a href="#">021-3456-7890</a></li>
-                            <li><a href="#">Oasispavilion, Depok, Jogjakarta</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center copyright-text">Copyright 2023 • All rights reserved • Oasisipavilion</p>
-        </div>
-    </footer>
 
     <script>
         const myModal = document.getElementById('myModal')

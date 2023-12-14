@@ -8,20 +8,13 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    public function index()
-    {
-        return view('auth.signup', [
-            'title' => 'Register',
-            'active' => 'register'
-        ]);
-    }
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'name' => 'required|max: 255',
             'username' => 'required|max: 255|min:3|unique:users',
             'email' => 'required|unique:users|email:dns',
+            'jenis_kelamin' => 'required',
             'password' => 'required|max: 255|min:5'
         ]);
 
@@ -29,6 +22,6 @@ class RegisterController extends Controller
 
         User::create($validatedData);
 
-        return redirect('/login')->with('success', 'Register successfully! Please login');
+        return redirect('/')->with('success', 'Register successfully! Please login');
     }
 }

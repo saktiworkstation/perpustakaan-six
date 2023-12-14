@@ -31,9 +31,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
+Route::get('/aboutus', function () {
     return view('about', [
         'title' => 'About',
+        'users' => User::latest()->paginate('6'),
     ]);
 });
 

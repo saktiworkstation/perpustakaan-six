@@ -155,11 +155,9 @@
                                         <input type="password" name="password"class="form-control form-custom"
                                             id="password" placeholder="Password" required></input>
                                     </div>
-                                    {{-- <p>Forgot <a href="#">Password</a>?</p> --}}
 
                                     <button type="submit" class="btn btn-primary btn-primary-custom">Sign in</button>
                                 </form>
-                                <!-- <button type="button" class="btn btn-secondary btn-secondary-custom" data-bs-dismiss="modal">Close</button> -->
                                 <p class="text-center">don't have an account yet? <a href=""
                                         data-bs-toggle="modal" data-bs-target="#myModal-regis"
                                         data-bs-whatever="@getbootstrap">register </a>now</p>
@@ -199,30 +197,81 @@
                                                 href="">Sign up</a></button>
                                     </div>
                                 </div>
-                                <form>
+                                <form action="/register" method="post">
+                                    @csrf
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label label-custom">Email</label>
-                                        <input type="text" class="form-control form-custom" id="recipient-name"
-                                            placeholder="Enter Email">
+                                        <input name="email" value="{{ old('email') }}" type="text"
+                                            class="form-control form-custom @error('email') is-invalid @enderror"
+                                            id="recipient-name" placeholder="Enter Email">
+                                        @error('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label label-custom">Fullname</label>
-                                        <input class="form-control form-custom" id="message-text"
-                                            placeholder="Enter Name"></input>
+                                        <input name="name" value="{{ old('name') }}"
+                                            class="form-control form-custom @error('name') is-invalid @enderror"
+                                            id="message-text" placeholder="Enter Name"></input>
+                                        @error('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label label-custom">Username</label>
+                                        <input name="username" value="{{ old('username') }}"
+                                            class="form-control form-custom @error('username') is-invalid @enderror"
+                                            id="message-text" placeholder="Enter Username"></input>
+                                        @error('username')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="jenis_kelamin" class="col-form-label label-custom">Jenis
+                                            Kelamin</label>
+                                        <select name="jenis_kelamin"
+                                            class="form-control form-custom @error('jenis_kelamin') is-invalid @enderror"
+                                            id="jenis_kelamin">
+                                            <option value="" selected disabled>Pilih Jenis Kelamin</option>
+                                            <option value="laki-laki"
+                                                {{ old('jenis_kelamin') == 'laki-laki' ? 'selected' : '' }}>Laki-Laki
+                                            </option>
+                                            <option value="perempuan"
+                                                {{ old('jenis_kelamin') == 'perempuan' ? 'selected' : '' }}>Perempuan
+                                            </option>
+                                        </select>
+                                        @error('jenis_kelamin')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label label-custom">Password</label>
-                                        <input type="password" class="form-control form-custom" id="message-text"
-                                            placeholder="Enter Password"></input>
+                                        <input name="password" value="{{ old('password') }}" type="password"
+                                            class="form-control form-custom @error('password') is-invalid @enderror"
+                                            id="message-text" placeholder="Enter Password"></input>
+                                        @error('password')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label label-custom">Confirm
                                             Password</label>
-                                        <input type="password" class="form-control form-custom" id="message-text"
+                                        <input name="confirm-password" value="{{ old('confirm-password') }}"
+                                            type="password" class="form-control form-custom" id="message-text"
                                             placeholder="Confirm Password"></input>
                                     </div>
+                                    <button type="submit" class="btn btn-primary btn-primary-custom">Sign up</button>
                                 </form>
-                                <button type="submit" class="btn btn-primary btn-primary-custom">Sign up</button>
                                 <p class="text-center">already have an account? <a href="#" data-bs-toggle="modal"
                                         data-bs-target="#myModal" data-bs-whatever="@getbootstrap">login </a>now</p>
                             </div>
